@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            select {
+                visibility: hidden;
+            }
+
+
+
+            input[id = "ciao"]:checked ~ select[name = "a"]{
+                visibility: visible;
+            }
+            
+            input[id = "tt"]:checked ~ select[name = "b"] {
+                visibility: visible;
+            }
+
+            .checkbox option::before {
+                content: "\2610";
+                width: 1.3em;
+                text-align: center;
+                display: inline-block;
+            }
+
+            .checkbox option:checked::before {
+                content: "\2611";
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <label for="ciao">fede</label>
+            <input type="radio" name="x" id="ciao"/>
+
+            <label for="tt">tomas</label>
+            <input type="radio" name="x" id="tt"/>
+
+            <select multiple = "" class = "checkbox" name="a" id="fede" size = "3">
+                <option value="fede">fede</option>
+                <option value="masa">masa</option>
+                <option value="tomas">tomas</option>
+            </select>
+            <br/>
+            <select multiple = "" class = "checkbox" name="b" id="fede" size = "3">
+                <option value="fede">fede</option>
+                <option value="masa">masa</option>
+                <option value="tomas">tomas</option>
+            </select>
+        </form>
+    </body>
+    
+    
+</html>
